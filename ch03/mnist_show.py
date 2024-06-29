@@ -1,7 +1,6 @@
 # coding: utf-8
 import sys, os
 current_dir = os.path.dirname(__file__)
-print('current dir = ', current_dir)
 parent_dir = os.path.dirname(current_dir)
 sys.path.append(parent_dir)
 
