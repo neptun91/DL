@@ -1,10 +1,10 @@
 # coding: utf-8
 import sys, os
+import time
 
 current_dir = os.path.dirname(__file__)
 os.chdir(current_dir)
 cwd = os.getcwd()
-print('cwd',cwd)
 
 parent_dir = os.path.dirname(current_dir)
 sys.path.append(parent_dir)
@@ -48,6 +48,7 @@ for i in range(len(x)):
     p= np.argmax(y) # 확률이 가장 높은 원소의 인덱스를 얻는다.
     if p == t[i]:
         print('Predicted num=', p, '  Original num=', t[i])
+        time.sleep(0.5)
         accuracy_cnt += 1
 
 print("Accuracy:" + str(float(accuracy_cnt) / len(x)))

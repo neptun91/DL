@@ -1,6 +1,13 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 
+
+current_dir = os.path.dirname(__file__)
+os.chdir(current_dir)
+cwd = os.getcwd()
+
+parent_dir = os.path.dirname(current_dir)
+sys.path.append(parent_dir)
+
 import numpy as np
 import pickle
 from dataset.mnist import load_mnist
