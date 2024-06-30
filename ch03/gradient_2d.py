@@ -59,8 +59,12 @@ if __name__ == '__main__':
     X = X.flatten()
     Y = Y.flatten()
     
+    print(X)
+    print(Y)
+
     grad = numerical_gradient(function_2, np.array([X, Y]) )
-    
+    print(grad)
+
     plt.figure()
     plt.quiver(X, Y, -grad[0], -grad[1],  angles="xy",color="#666666")#,headwidth=10,scale=40,color="#444444")
     plt.xlim([-2, 2])
