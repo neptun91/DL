@@ -1,4 +1,4 @@
-# coding: utf-8
+# coding: utf-8 AA
 import sys, os
 current_dir = os.path.dirname(__file__)
 parent_dir = os.path.dirname(current_dir)
@@ -51,7 +51,7 @@ for i in range(iters_num):
         test_acc = network.accuracy(x_test, t_test)
         train_acc_list.append(train_acc)
         test_acc_list.append(test_acc)
-        print("train acc, test acc | " + str(train_acc) + ", " + str(test_acc))
+        print(i, "train acc, test acc | " + str(train_acc) + ", " + str(test_acc))
 
 # 그래프 그리기
 markers = {'train': 'o', 'test': 's'}
