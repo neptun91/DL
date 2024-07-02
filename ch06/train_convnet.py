@@ -1,6 +1,9 @@
 # coding: utf-8
 import sys, os
-sys.path.append(os.pardir)  # 부모 디렉터리의 파일을 가져올 수 있도록 설정
+current_dir = os.path.dirname(__file__)
+parent_dir = os.path.dirname(current_dir)
+sys.path.append(parent_dir)
+
 import numpy as np
 import matplotlib.pyplot as plt
 from dataset.mnist import load_mnist
@@ -11,8 +14,8 @@ from common.trainer import Trainer
 (x_train, t_train), (x_test, t_test) = load_mnist(flatten=False)
 
 # 시간이 오래 걸릴 경우 데이터를 줄인다.
-#x_train, t_train = x_train[:5000], t_train[:5000]
-#x_test, t_test = x_test[:1000], t_test[:1000]
+x_train, t_train = x_train[:5000], t_train[:5000]
+x_test, t_test = x_test[:1000], t_test[:1000]
 
 max_epochs = 20
 
